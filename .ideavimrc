@@ -1,0 +1,81 @@
+"" Links
+" https://github.com/JetBrains/ideavim/blob/master/doc/set-commands.md
+
+""" Leader
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+""" Global
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set scrolloff=5
+" set clipboard+=unnamedplus
+" Also add: Editor -> General -> Appearance -> Show line numbers = Hybrid
+set relativenumber number 
+
+""" Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+set which-key
+set notimeout
+set peekaboo
+
+""" Remaps
+" :actionlist
+" Run action - :action <actionName>
+
+"" Goto/Find
+map gI <Action>(GotoImplementation)
+map gd <Action>(GotoDeclaration)
+map gD <Action>(GotoDeclaration)
+map gr <Action>(FindUsages)
+map <Leader>hi <Action>(ShowHoverInfo)
+
+"" Search 
+map <Leader>se <Action>(SearchEverywhere)
+map <Leader>sg <Action>(FindInPath)
+map <Leader>sf <Action>(GotoFile)
+map <Leader>sn :e ~/.ideavimrc<CR>
+
+"" Refactor
+map <Leader>rt <Action>(Refactorings.QuickListPopupAction) 
+map <Leader>rr <Action>(RenameElement) 
+" Alt + Enter (action list)
+map <Leader>al <Action>(ShowIntentionActions) 
+
+"" Find errors
+map <Leader>ge <Action>(GotoNextError)
+map <Leader>gE <Action>(GotoPreviousError)
+
+"" Debugging
+map <Leader>db <Action>(ToggleLineBreakpoint)
+map <Leader>si <Action>(StepInto)
+map <Leader>so <Action>(StepOver)
+map <Leader>dr <Action>(Resume)
+map <Leader>ds <Action>(Stop)
+
+"" Test
+map <Leader>ur <Action>(RiderUnitTestRunContextAction)
+map <Leader>ud <Action>(RiderUnitTestDebugContextAction)
+
+"" Files
+map <Leader>cw <Action>(CloseContent)
+map <Leader>pt <Action>(PinActiveTab)
+map <Leader>ct <Action>(CloseAllUnpinnedEditors)
+map <Leader>nf <Action>(NewElementSamePlace)
+
+"" Navigation
+map <C-w>w <Action>(NextWindow)
+map <C-w><C-w> <Action>(NextWindow)
+
+map <Leader>wu <Action>(ActivateUnitTestsToolWindow)
+map <Leader>wU <Action>(ActivateUnitTestsToolWindow) <Action>(HideActiveWindow)
+
+map - <Action>(ActivateProjectToolWindow)
+map <Leader>wp <Action>(ActivateProjectToolWindow)
+map <Leader>wP <Action>(ActivateProjectToolWindow) <Action>(HideActiveWindow)
+
+"" Code cleanup
+map <Leader>cc <Action>(SilentCodeCleanup)
