@@ -74,7 +74,7 @@ map <Leader>wu <Action>(ActivateUnitTestsToolWindow)
 map <Leader>wU <Action>(ActivateUnitTestsToolWindow) <Action>(HideActiveWindow)
 
 map - <Action>(ActivateProjectToolWindow)
-map <Leader>wp <Action>(ActivateProjectToolWindow)
+map <Leader>wp <Action>(ActivateProjectToolWindow) 
 map <Leader>wP <Action>(ActivateProjectToolWindow) <Action>(HideActiveWindow)
 
 "" Code cleanup
