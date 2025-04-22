@@ -78,4 +78,4 @@ map <Leader>wp <Action>(ActivateProjectToolWindow)
 map <Leader>wP <Action>(ActivateProjectToolWindow) <Action>(HideActiveWindow)
 
 "" Code cleanup
-map <Leader>cc <Action>(SilentCodeCleanup)
+map <Leader>f <Action>(SilentCodeCleanup)
