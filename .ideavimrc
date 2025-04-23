@@ -41,9 +41,9 @@ map <Leader>sn :e ~/.ideavimrc<CR>
 
 "" Refactor
 map <Leader>rt <Action>(Refactorings.QuickListPopupAction) 
-map <Leader>rr <Action>(RenameElement) 
+map <Leader>rn <Action>(RenameElement) 
 " Alt + Enter (action list)
-map <Leader>al <Action>(ShowIntentionActions) 
+map <Leader>ca <Action>(ShowIntentionActions) 
 
 "" Find errors
 map <Leader>ge <Action>(GotoNextError)
