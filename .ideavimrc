@@ -80,3 +80,6 @@ map <Leader>wP <Action>(ActivateProjectToolWindow) <Action>(HideActiveWindow)
 
 "" Code cleanup
 map <Leader>f <Action>(SilentCodeCleanup)
+
+"" Visual
+map <Leader>va 'GVgg'<CR>
