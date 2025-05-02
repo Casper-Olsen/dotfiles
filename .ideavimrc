@@ -11,7 +11,6 @@ set ignorecase
 set smartcase
 set hlsearch
 set scrolloff=5
-" set clipboard+=unnamedplus
 " Also add: Editor -> General -> Appearance -> Show line numbers = Hybrid
 set relativenumber number 
 
@@ -21,6 +20,7 @@ Plug 'tpope/vim-commentary'
 set which-key
 set notimeout
 set peekaboo
+set NERDTree
 
 """ Remaps
 " :actionlist
@@ -62,7 +62,7 @@ map <Leader>tdn <Action>(RiderUnitTestDebugContextAction)
 
 "" Files
 map <Leader>cw <Action>(CloseContent)
-map <Leader>pt <Action>(PinActiveTab)
+map <Leader>a <Action>(PinActiveTab)
 map <Leader>ct <Action>(CloseAllUnpinnedEditors)
 map <Leader>nf <Action>(NewElementSamePlace)
 
@@ -73,7 +73,8 @@ map <C-w><C-w> <Action>(NextWindow)
 map <Leader>wu <Action>(ActivateUnitTestsToolWindow)
 map <Leader>wU <Action>(ActivateUnitTestsToolWindow) <Action>(HideActiveWindow)
 
-map - <Action>(ActivateProjectToolWindow)
+map - :NERDTree<CR>
+
 map <Leader>wp <Action>(ActivateProjectToolWindow) 
 map <Leader>wP <Action>(ActivateProjectToolWindow) <Action>(HideActiveWindow)
 
