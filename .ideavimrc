@@ -87,3 +87,7 @@ map <Leader>f <Action>(SilentCodeCleanup)
 
 "" Visual
 map <Leader>va 'GVgg'<CR>
+
+"" CoPilot
+map <Leader>cd <Action>(copilot.disableCopilot)
+map <Leader>ce <Action>(copilot.enableCopilot)
