@@ -70,13 +70,17 @@ map <Leader>nf <Action>(NewElementSamePlace)
 map <C-w>w <Action>(NextWindow)
 map <C-w><C-w> <Action>(NextWindow)
 
-map <Leader>wu <Action>(ActivateUnitTestsToolWindow)
-map <Leader>wU <Action>(ActivateUnitTestsToolWindow) <Action>(HideActiveWindow)
-
 map - :NERDTree<CR>
 
-map <Leader>wp <Action>(ActivateProjectToolWindow) 
-map <Leader>wP <Action>(ActivateProjectToolWindow) <Action>(HideActiveWindow)
+map <Leader>wu <Action>(ActivateUnitTestsToolWindow)
+
+map <Leader>wah <Action>(HideAllWindows) <Action>(ActivateProjectToolWindow)
+map <Leader>wh <Action>(HideActiveWindow)
+
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 
 "" Code cleanup
 map <Leader>f <Action>(SilentCodeCleanup)
