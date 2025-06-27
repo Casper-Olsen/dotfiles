@@ -106,8 +106,14 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim="nvim"
-# Set up fzf key bindings and fuzzy completion
+
+# Set up fzf
 source <(fzf --zsh)
+
+cdf() {
+  local dir
+  dir=$(find . -type d -not -path '*/\.*' 2> NUL | fzf) && cd "$dir"
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
