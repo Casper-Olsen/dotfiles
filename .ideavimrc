@@ -62,7 +62,7 @@ map <Leader>tdn <Action>(RiderUnitTestDebugContextAction)
 
 "" Files
 map <Leader>cw <Action>(CloseContent)
-map <Leader>a <Action>(PinActiveTab)
+map <Leader>pa <Action>(PinActiveTab)
 map <Leader>ct <Action>(CloseAllUnpinnedEditors)
 map <Leader>nf <Action>(NewElementSamePlace)
 
