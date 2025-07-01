@@ -51,10 +51,10 @@ map <Leader>gE <Action>(GotoPreviousError)
 
 "" Debugging
 map <Leader>db <Action>(ToggleLineBreakpoint)
-map <Leader>si <Action>(StepInto)
-map <Leader>so <Action>(StepOver)
+map <Leader>di <Action>(StepInto)
+map <Leader>do <Action>(StepOver)
 map <Leader>dr <Action>(Resume)
-map <Leader>ds <Action>(Stop)
+map <Leader>de <Action>(Stop)
 
 "" Test
 map <Leader>tn <Action>(RiderUnitTestRunContextAction)
