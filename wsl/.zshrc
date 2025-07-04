@@ -133,6 +133,6 @@ source <(fzf --zsh)
 
 cdf() {
   local dir
-  dir=$(find . -type d -not -path '*/\.*' 2> NUL | fzf) && cd "$dir"
+  dir=$(find . -type d -not -path '*/\.*' 2> /dev/null | fzf) && cd "$dir"
 }
 
