@@ -112,7 +112,7 @@ source <(fzf --zsh)
 
 cdf() {
   local dir
-  dir=$(find . -type d -not -path '*/\.*' 2> NUL | fzf) && cd "$dir"
+  dir=$(find . -type d -not -path '*/\.*' 2> /dev/null | fzf) && cd "$dir"
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
