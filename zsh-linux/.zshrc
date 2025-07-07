@@ -110,11 +110,6 @@ alias vim="nvim"
 # Set up fzf
 source <(fzf --zsh)
 
-cdf() {
-  local dir
-  dir=$(find . -type d -not -path '*/\.*' 2> /dev/null | fzf) && cd "$dir"
-}
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

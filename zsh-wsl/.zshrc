@@ -131,8 +131,3 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Set up fzf
 source <(fzf --zsh)
 
-cdf() {
-  local dir
-  dir=$(find . -type d -not -path '*/\.*' 2> /dev/null | fzf) && cd "$dir"
-}
-
