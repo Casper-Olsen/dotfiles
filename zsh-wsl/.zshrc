@@ -55,6 +55,13 @@ alias vim="nvim"
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# thefuck
+# WSL workaround for Windows path issues. See: https://github.com/microsoft/WSL/issues/1640#issuecomment-616887435
+# Add the following to /etc/wsl.conf to prevent Windows paths from being appended:
+#   [interop]
+#   appendWindowsPath = false
+eval $(thefuck --alias)
+
 # fzf
 source <(fzf --zsh)
 
@@ -68,3 +75,4 @@ gitcc() {
   branch=$(git remote show "$remote" 2>/dev/null | sed -n '/HEAD branch/s/.*: //p')
   git rev-list --count HEAD ^"$remote"/"$branch" 2>/dev/null
 }
+
