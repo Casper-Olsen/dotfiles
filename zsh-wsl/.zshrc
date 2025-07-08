@@ -14,7 +14,7 @@ export PATH="/opt/nvim/nvim-linux64/bin:$PATH"
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$HOME/.dotnet:$PATH
 
-# Set resouce limits
+# Set resource limits
 ulimit -n 65536
 
 # Theme
