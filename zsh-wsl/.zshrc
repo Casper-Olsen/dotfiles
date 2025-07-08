@@ -68,6 +68,13 @@ source <(fzf --zsh)
 # opencode
 export PATH=/home/casper/.opencode/bin:$PATH
 
+# bun completions
+[ -s "/home/casper/.bun/_bun" ] && source "/home/casper/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Commands
 gitcc() {
   local remote="${1:-origin}"
@@ -75,4 +82,5 @@ gitcc() {
   branch=$(git remote show "$remote" 2>/dev/null | sed -n '/HEAD branch/s/.*: //p')
   git rev-list --count HEAD ^"$remote"/"$branch" 2>/dev/null
 }
+
 
