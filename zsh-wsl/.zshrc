@@ -5,82 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-export PATH=$PATH:/snap/bin
-export PATH="/opt/nvim/nvim-linux64/bin:$PATH"
-
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$HOME/.dotnet:$PATH
-
-# Set resource limits
-ulimit -n 65536
-
-# Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Update behavior
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  ssh-agent
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs, plugins, and themes.
-alias vim="nvim"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# thefuck
-# WSL workaround for Windows path issues. See: https://github.com/microsoft/WSL/issues/1640#issuecomment-616887435
-# Add the following to /etc/wsl.conf to prevent Windows paths from being appended:
-#   [interop]
-#   appendWindowsPath = false
-eval $(thefuck --alias)
-
-# fzf
-source <(fzf --zsh)
-
-# opencode
-export PATH=/home/casper/.opencode/bin:$PATH
-
-# bun completions
-[ -s "/home/casper/.bun/_bun" ] && source "/home/casper/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Commands
-gitcc() {
-  local remote="${1:-origin}"
-  local branch
-  branch=$(git remote show "$remote" 2>/dev/null | sed -n '/HEAD branch/s/.*: //p')
-  git rev-list --count HEAD ^"$remote"/"$branch" 2>/dev/null
-}
-
-
+# Load all config parts
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/env.zsh
+source ~/.config/zsh/function.zsh
+source ~/.config/zsh/plugins.zsh
+source ~/.config/zsh/tools.zsh
