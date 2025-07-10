@@ -7,9 +7,6 @@ export PATH="/opt/nvim/nvim-linux64/bin:$PATH"
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$HOME/.dotnet:$PATH
 
-# opencode
-export PATH=/home/casper/.opencode/bin:$PATH
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
