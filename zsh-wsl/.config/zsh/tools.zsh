@@ -19,4 +19,4 @@ eval $(thefuck --alias)
 source <(fzf --zsh)
 
 # bun completions
-[ -s "/home/casper/.bun/_bun" ] && source "/home/casper/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
