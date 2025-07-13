@@ -7,3 +7,6 @@ fi
 
 # Set up fzf
 source <(fzf --zsh)
+
+# thefuck
+eval $(thefuck --alias)
