@@ -3,5 +3,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# vcpkg
+export PATH=$PATH:$HOME/vcpkg
+export VCPKG_ROOT=$HOME/vcpkg
+
 # Set file descriptor limit
 ulimit -n 65536
