@@ -11,3 +11,4 @@ source ~/.config/zsh/env.zsh
 source ~/.config/zsh/function.zsh
 source ~/.config/zsh/plugins.zsh
 source ~/.config/zsh/tools.zsh
+
