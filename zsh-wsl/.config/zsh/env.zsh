@@ -19,5 +19,9 @@ export NVM_DIR="$HOME/.nvm"
 export SA_PASSWORD="$(cat ~/.mssql_sa_password)"
 export TestCommonConnectionString="Server=localhost,1433;Database=master;User Id=sa;Password=$SA_PASSWORD;TrustServerCertificate=True;"
 
+# Function App environment variables
+export FunctionAppHostPath="$HOME/.nvm/versions/node/v$(node -v | cut -c2-)/lib/node_modules/azure-functions-core-tools/bin/func.dll"
+export DotnetExecutablePath="$DOTNET_ROOT/dotnet"
+
 # Set file descriptor limit
 ulimit -n 65536
