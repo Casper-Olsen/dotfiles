@@ -18,3 +18,7 @@ gitprune() {
 gitnew() {
   git switch -c "$1"
 }
+
+azsqltoken() {
+  az account get-access-token --resource https://ossrdbms-aad.database.windows.net --query accessToken | sed 's/^"\(.*\)"$/\1/'
+}
