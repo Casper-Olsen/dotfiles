@@ -11,5 +11,9 @@ export PATH=$HOME/.dotnet:$PATH
 export PATH=$PATH:$HOME/vcpkg
 export VCPKG_ROOT=$HOME/vcpkg
 
+# Load Rust (cargo + rustc) environment variables installed by rustup
+# This adds ~/.cargo/bin to PATH so tools like rustc, cargo, and rust-analyzer are available
+. "$HOME/.cargo/env"
+
 # Set file descriptor limit
 ulimit -n 65536
