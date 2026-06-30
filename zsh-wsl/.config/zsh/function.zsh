@@ -22,3 +22,21 @@ gitnew() {
 azsqltoken() {
   az account get-access-token --resource https://ossrdbms-aad.database.windows.net --query accessToken | sed 's/^"\(.*\)"$/\1/'
 }
+
+pyvenv() {
+  local dir="$PWD"
+
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/.venv/bin/activate" ]]; then
+      source "$dir/.venv/bin/activate"
+      echo "Activated venv: $dir/.venv"
+      echo "You can now run commands installed in this environment."
+      return 0
+    fi
+
+    dir="${dir:h}"
+  done
+
+  echo "No .venv found in current directory or parent directories."
+  return 1
+}
