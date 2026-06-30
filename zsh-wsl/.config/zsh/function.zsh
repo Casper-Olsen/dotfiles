@@ -31,6 +31,7 @@ pyvenv() {
       source "$dir/.venv/bin/activate"
       echo "Activated venv: $dir/.venv"
       echo "You can now run commands installed in this environment."
+      echo "Run 'deactivate' to leave this virtual environment."
       return 0
     fi
 
