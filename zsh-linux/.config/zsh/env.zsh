@@ -15,5 +15,7 @@ export VCPKG_ROOT=$HOME/vcpkg
 # This adds ~/.cargo/bin to PATH so tools like rustc, cargo, and rust-analyzer are available
 . "$HOME/.cargo/env"
 
+export RUST_LOG=invporis
+
 # Set file descriptor limit
 ulimit -n 65536
