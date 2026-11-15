@@ -6,6 +6,11 @@
       "api": "openai-completions",
       "models": [
         {
+          "id": "qwen3.5:4b",
+          "name": "Ollama: Qwen 3.5 4B (Agentic GPU)",
+          "contextWindow": 8192
+        },
+        {
           "id": "qwen2.5-coder:3b",
           "name": "Ollama: Qwen 2.5 Coder 3B (GPU)",
           "contextWindow": 8192
