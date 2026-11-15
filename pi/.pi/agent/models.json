@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://localhost:11434/v1",
+      "apiKey": "ollama",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "qwen2.5-coder:3b",
+          "name": "Ollama: Qwen 2.5 Coder 3B (GPU)"
+        }
+      ]
+    }
+  }
+}

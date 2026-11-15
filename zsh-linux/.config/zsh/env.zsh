@@ -19,5 +19,8 @@ export VCPKG_ROOT=$HOME/vcpkg
 export RUST_LOG=invporis
 export INVPORIS_OPENFIGI_API_KEY=$(cat ~/.figi_api_key)
 
+# Pi
+export PATH="$HOME/.local/bin:$PATH"
+
 # Set file descriptor limit
 ulimit -n 65536
